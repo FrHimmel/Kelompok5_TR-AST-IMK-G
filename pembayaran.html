@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Veloce Elite - Payment</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,600;1,400;1,600&family=Syncopate:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="pembayaran.css">
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="container-fluid px-5 h-100 d-flex align-items-center justify-content-between">
+            
+            <div class="logo-area">
+                <a href="home.html">
+                    <img src="images/logo.png" alt="Veloce Elite Logo" class="brand-logo-img">
+                </a>
+            </div>
+
+            <nav class="nav-links d-none d-lg-flex align-items-center">
+                <a href="home.html" class="nav-item-link">Home</a>
+                <div class="dropdown-wrapper">
+                    <a href="#" id="showroomToggle" class="nav-item-link">Showroom <i class="fa-solid fa-chevron-down ms-1 text-white opacity-75 style-arrow"></i></a>
+                    
+                    <div class="custom-dropdown" id="showroomDropdown">
+                        <div class="dropdown-arrow"></div>
+                        <div class="dropdown-title-header">Explore by brand</div>
+                        <ul class="dropdown-brand-list">
+                            <li>
+                                <a href="porsche.html">
+                                    <span class="brand-name">
+                                        <img src="images/logopor.png" alt="Porsche" class="dropdown-brand-logo"> 
+                                        Porsche
+                                    </span> 
+                                    <i class="fa-solid fa-chevron-right text-muted fs-small"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="ferrari.html">
+                                    <span class="brand-name">
+                                        <img src="images/logofer.jpg" alt="Ferrari" class="dropdown-brand-logo"> 
+                                        Ferrari
+                                    </span> 
+                                    <i class="fa-solid fa-chevron-right text-muted fs-small"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span class="brand-name">
+                                        <img src="images/logolam.png" alt="Lamborghini" class="dropdown-brand-logo"> 
+                                        Lamborghini
+                                    </span> 
+                                    <i class="fa-solid fa-chevron-right text-muted fs-small"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span class="brand-name">
+                                        <img src="images/logolaren.png" alt="McLaren" class="dropdown-brand-logo"> 
+                                        McLaren
+                                    </span> 
+                                    <i class="fa-solid fa-chevron-right text-muted fs-small"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span class="brand-name">
+                                        <img src="images/logobmw.png" alt="BMW" class="dropdown-brand-logo"> 
+                                        BMW
+                                    </span> 
+                                    <i class="fa-solid fa-chevron-right text-muted fs-small"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span class="brand-name">
+                                        <img src="images/logomer.png" alt="Mercedes-Benz" class="dropdown-brand-logo"> 
+                                        Mercedes-Benz
+                                    </span> 
+                                    <i class="fa-solid fa-chevron-right text-muted fs-small"></i>
+                                </a>
+                            </li>
+                        </ul>
+                        <div class="dropdown-footer">
+                            <a href="vac.html">View All Cars <i class="fa-solid fa-arrow-right ms-1"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <a href="#" class="nav-item-link">About Us</a>
+                <a href="contact.html" class="nav-item-link">Contact</a>
+            </nav>
+
+            <div class="user-area d-flex align-items-center">
+                <div class="vertical-divider d-none d-lg-block"></div>
+                <a href="#" class="btn-auth">
+                    <i class="fa-regular fa-user-circle me-2 fs-5 align-middle"></i> <span class="align-middle">User</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main class="payment-container container-fluid px-5 my-5">
+        <div class="d-flex justify-content-between align-items-start mb-4 row-gap-3 flex-wrap">
+            <div class="payment-title-area">
+                <h1 class="page-title text-uppercase">Payment</h1>
+                <!-- Pembungkus baru untuk garis dan teks agar sejajar -->
+                <div class="d-flex align-items-center gap-3 mt-2">
+                    <div class="title-accent-line"></div>
+                    <p class="page-subtitle m-0">Silahkan lakukan pembayaran untuk menjemput mobil impian anda</p>
+                </div>
+            </div>
+            
+            <nav class="custom-breadcrumb">
+                <a href="home.html">Home</a> <i class="fa-solid fa-chevron-right mx-2"></i>
+                <a href="#">Showroom</a> <i class="fa-solid fa-chevron-right mx-2"></i>
+                <a href="vac.html">View All Car</a> <i class="fa-solid fa-chevron-right mx-2"></i>
+                <a href="#">View Detail</a> <i class="fa-solid fa-chevron-right mx-2"></i>
+                <span class="active">Payment</span>
+            </nav>
+        </div>
+
+        <div class="row g-5">
+            <div class="col-12 col-xl-7">
+                <form id="paymentForm">
+                    <div class="form-section mb-5">
+                        <h2 class="section-heading text-uppercase mb-4">1. Informasi Anda</h2>
+                        <div class="row g-4">
+                            <div class="col-md-6">
+                                <div class="input-custom-group">
+                                    <i class="fa-regular fa-user icon-field"></i>
+                                    <input type="text" placeholder="Full Name" required>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="input-custom-group">
+                                    <i class="fa-regular fa-envelope icon-field"></i>
+                                    <input type="email" placeholder="Email" required>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="input-custom-group">
+                                    <i class="fa-solid fa-phone icon-field"></i>
+                                    <input type="tel" placeholder="Phone Number" required>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="input-custom-group">
+                                    <i class="fa-solid fa-location-dot icon-field"></i>
+                                    <input type="text" placeholder="Location" required>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <hr class="section-divider my-4">
+
+                    <div class="form-section">
+                        <h2 class="section-heading text-uppercase mb-4">2. Informasi Kartu</h2>
+                        <div class="card-details-box p-4 mb-4">
+                            <h3 class="box-inner-title mb-4">Detail Kartu</h3>
+                            <div class="row g-4">
+                                <div class="col-12">
+                                    <div class="input-custom-group">
+                                        <i class="fa-regular fa-credit-card icon-field"></i>
+                                        <input type="text" placeholder="Card Number" required>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="input-custom-group">
+                                        <i class="fa-regular fa-calendar icon-field"></i>
+                                        <input type="text" placeholder="Expired Date" required>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="input-custom-group">
+                                        <i class="fa-regular fa-user icon-field"></i>
+                                        <input type="text" placeholder="Full Name" required>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+            <div class="col-12 col-xl-5">
+                <div class="summary-card p-4">
+                    <h3 class="summary-title text-uppercase mb-4">Pesanan Anda</h3>
+                    
+                    <div class="car-summary-item d-flex gap-3 mb-4">
+                        <div class="summary-img-wrapper">
+                            <img src="images/911.jpg" alt="Porsche 911 GT3RS">
+                        </div>
+                        <div class="summary-car-info">
+                            <h4>Porsche 911 GT3RS</h4>
+                            <p class="mb-1">2022 <span>|</span> Sport Car</p>
+                            <p>50.000 KM</p>
+                        </div>
+                    </div>
+
+                    <div class="price-breakdown-list">
+                        <div class="price-row">
+                            <span>Harga</span>
+                            <span>$ 250,000 USD</span>
+                        </div>
+                        <div class="price-row">
+                            <span>Pajak</span>
+                            <span>$ 25,000 USD</span>
+                        </div>
+                        <div class="price-row">
+                            <span>Biaya ongkir</span>
+                            <span>$ 2,000 USD</span>
+                        </div>
+                        <div class="price-row">
+                            <span>Jaminan Kerusakan</span>
+                            <span>$ 5,000 USD</span>
+                        </div>
+                        
+                        <div class="total-row d-flex justify-content-between align-items-center pt-4 mt-4">
+                            <span class="text-uppercase fw-bold">Total</span>
+                            <span class="total-price-amount">$ 282,000 USD</span>
+                        </div>
+                    </div>
+                </div>
+
+                <button type="submit" form="paymentForm" class="btn-bayar-premium text-uppercase mt-4">Bayar</button>
+            </div>
+        </div>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container-fluid px-5">
+            <div class="row pt-5 pb-4 border-bottom border-secondary border-opacity-25">
+                <div class="col-12 col-md-6 mb-4 mb-md-0">
+                    <div class="footer-logo mb-2">VELOCE ELITE</div>
+                    <p class="footer-desc w-70">premium vehicles for those who demand the best</p>
+                    <div class="footer-socials mt-4">
+                        <a href="https://youtu.be/7r_7APwid-0?si=fvlP6czeRpipWtRG"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="https://youtu.be/7r_7APwid-0?si=fvlP6czeRpipWtRG"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://youtu.be/7r_7APwid-0?si=fvlP6czeRpipWtRG"><i class="fa-brands fa-youtube"></i></a>
+                        <a href="https://youtu.be/7r_7APwid-0?si=fvlP6czeRpipWtRG"><i class="fa-brands fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="row pt-3 pb-3">
+                <div class="col-12 text-center text-muted small">
+                    &copy; 2026 Veloce Elite. All Rights Reserved.
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div class="modal-overlay" id="successModal">
+        <div class="success-modal-card">
+            <div class="success-icon-circle">
+                <i class="fa-solid fa-check"></i>
+            </div>
+            <h2 class="success-text text-uppercase">Pembayaran Berhasil</h2>
+            <button class="btn-kembali text-uppercase" id="btnKembali">Kembali</button>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="main.js"></script> 
+</body>
+</html>

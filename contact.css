@@ -1,0 +1,346 @@
+/* ROOT PARAMETER WARNA ELEGAN */
+:root {
+    --primary-mazda-red: #8c111c;
+    --bg-luxury-cream: #faf6ed;
+    --accent-matte-gold: #c2a478;
+    --dark-charcoal: #1c1a17;
+    --text-main-white: #ffffff;
+    --text-body-dark: #2b2b2b;
+  }
+  
+  /* GLOBAL CONFIGURATION */
+  * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+  }
+  
+  body {
+      font-family: 'Montserrat', sans-serif;
+      background-color: var(--bg-luxury-cream);
+      color: var(--text-body-dark);
+      overflow-x: hidden;
+  }
+  
+  /* HEADER NAVIGATION */
+  .main-header {
+      background-color: var(--primary-mazda-red);
+      height: 90px;
+      width: 100%;
+      position: relative;
+      z-index: 1000;
+  }
+  
+  .brand-logo-img {
+      height: 52px; 
+      width: auto;
+      object-fit: contain;
+      display: block;
+  }
+  
+  .nav-links .nav-item-link {
+      color: var(--text-main-white);
+      text-decoration: none;
+      font-size: 15px;
+      font-weight: 500;
+      margin: 0 22px;
+      position: relative;
+      padding: 8px 0;
+      letter-spacing: 0.5px;
+  }
+  
+  .nav-links .nav-item-link.active::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background-color: var(--text-main-white);
+  }
+  
+  .style-arrow {
+      font-size: 11px;
+      vertical-align: middle;
+  }
+  
+  .vertical-divider {
+      width: 1px;
+      height: 40px;
+      background-color: rgba(255, 255, 255, 0.25);
+      margin-right: 30px;
+  }
+  
+  .btn-auth {
+      color: var(--accent-matte-gold) !important;
+      text-decoration: none;
+      font-size: 15px;
+      font-weight: 500;
+      letter-spacing: 0.5px;
+  }
+  
+  /* DROPDOWN AREA (Bersih Tanpa Kotak Putih Pada Logo) */
+  .dropdown-wrapper {
+      position: relative;
+  }
+  .dropdown-wrapper::before {
+      content: '';
+      position: absolute;
+      top: 25px;
+      left: 0;
+      width: 100%;
+      height: 35px;
+      background: transparent;
+      z-index: 1005;
+      display: none;
+  }
+  .dropdown-wrapper:hover::before { 
+      display: block; 
+  }
+  
+  .custom-dropdown {
+      position: absolute;
+      top: 48px;
+      left: 50%;
+      transform: translateX(-50%) translateY(10px);
+      width: 260px;
+      background-color: var(--text-main-white);
+      border-radius: 12px;
+      box-shadow: 0 10px 35px rgba(0, 0, 0, 0.18);
+      padding: 18px 0 0 0;
+      display: none;
+      opacity: 0;
+      z-index: 1010;
+      transition: opacity 0.25s ease, transform 0.25s ease;
+  }
+  .custom-dropdown.show, .dropdown-wrapper:hover .custom-dropdown {
+      display: block;
+      opacity: 1;
+      transform: translateX(-50%) translateY(0);
+  }
+  
+  .dropdown-arrow {
+      position: absolute;
+      top: -6px;
+      left: 50%;
+      transform: translateX(-50%) rotate(45deg);
+      width: 14px;
+      height: 14px;
+      background-color: var(--text-main-white);
+  }
+  
+  .dropdown-title-header {
+      font-size: 11px;
+      font-weight: 700;
+      color: #a65359; 
+      text-transform: uppercase;
+      padding: 0 22px 12px 22px;
+      letter-spacing: 0.5px;
+  }
+  
+  .dropdown-brand-list { 
+      list-style: none; 
+      padding: 0; 
+      margin: 0; 
+  }
+  .dropdown-brand-list li a {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 12px 22px;
+      color: var(--dark-charcoal) !important;
+      font-size: 13px;
+      font-weight: 500;
+      text-decoration: none;
+  }
+  .dropdown-brand-list li a:hover { 
+      background-color: #f7f5f0; 
+  }
+  .brand-name { 
+      display: flex; 
+      align-items: center; 
+  }
+  .dropdown-brand-logo-wrapper {
+      width: 32px;
+      height: 32px;
+      background-color: transparent; 
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 15px;
+      border: none; 
+  }
+  .dropdown-brand-logo {
+      max-width: 100%;
+      max-height: 100%;
+      width: auto;
+      height: auto;
+      object-fit: contain; 
+  }
+  .dropdown-footer {
+      border-top: 1px solid #f0edf6;
+      padding: 14px 22px;
+      margin-top: 6px;
+      border-radius: 0 0 12px 12px;
+  }
+  .dropdown-footer a {
+      color: var(--primary-mazda-red) !important;
+      font-weight: 700 !important;
+      font-size: 13px !important;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+  }
+  
+  /* HERO SECTION - DISESUAIKAN SAMA DENGAN UKURAN HOME AWAL */
+  .hero-section {
+      width: 100%;
+      height: 500px; 
+      overflow: hidden;
+      line-height: 0;
+  }
+  
+  .hero-main-img {
+      width: 100%;
+      height: 100%; 
+      display: block;
+      object-fit: cover; 
+      object-position: center; 
+  }
+  
+  /* MAIN CONTENT AREA (CONTACT & TEAM) */
+  .content-section {
+      padding: 60px 0 80px 0;
+      background-color: var(--bg-luxury-cream);
+  }
+  
+  .section-title {
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--primary-mazda-red);
+      letter-spacing: 1px;
+      margin-bottom: 35px;
+  }
+  
+  /* CONTACT CARDS STYLE */
+  .info-grid {
+      max-width: 1000px;
+      margin: 0 auto;
+  }
+  
+  .info-card {
+      background-color: transparent;
+      border: 1px solid #e2dcd0;
+      border-radius: 6px;
+      padding: 30px 15px;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+  }
+  
+  .info-icon {
+      font-size: 32px;
+      color: var(--primary-mazda-red);
+      margin-bottom: 12px;
+  }
+  
+  .info-label {
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--dark-charcoal);
+      letter-spacing: 0.5px;
+      margin-bottom: 6px;
+  }
+  
+  .info-value {
+      font-size: 11px;
+      color: #555555;
+      line-height: 1.4;
+  }
+  
+  /* TEAM STYLE */
+  .team-grid {
+      max-width: 1000px;
+      margin: 0 auto;
+  }
+  
+  .team-card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+  }
+  
+  .team-img-wrapper {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      overflow: hidden;
+      margin-bottom: 15px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  }
+  
+  .team-img-wrapper img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+  }
+  
+  .team-name {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--dark-charcoal);
+      margin-bottom: 4px;
+  }
+  
+  .team-role {
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--primary-mazda-red);
+      letter-spacing: 0.5px;
+  }
+  
+  /* FOOTER */
+  .main-footer {
+      background-color: var(--dark-charcoal);
+      color: var(--text-main-white);
+  }
+  .footer-logo {
+      font-family: 'Syncopate', sans-serif;
+      color: var(--accent-matte-gold);
+      font-size: 18px;
+      font-weight: 700;
+      letter-spacing: 2px;
+  }
+  .footer-desc {
+      font-size: 12px;
+      color: #a0a0a0;
+      text-transform: lowercase;
+  }
+  .footer-socials a {
+      color: var(--text-main-white);
+      margin-right: 20px;
+      font-size: 16px;
+  }
+  .footer-socials a:hover { 
+      color: var(--accent-matte-gold); 
+  }
+  .footer-quicklinks .links-title {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      color: var(--accent-matte-gold);
+  }
+  .footer-quicklinks a {
+      display: block;
+      color: #b0b0b0;
+      text-decoration: none;
+      font-size: 13px;
+      margin-bottom: 7px;
+  }
+  .fs-small { 
+      font-size: 11px; 
+  }

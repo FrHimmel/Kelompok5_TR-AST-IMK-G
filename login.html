@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Veloce Elite - Log In</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+
+    <div class="container">
+        <div class="left-side"></div>
+
+        <div class="right-side">
+            <div class="login-box">
+                
+                <div class="logo-container">
+                    <img src="images/logo.png" alt="Veloce Elite Logo" class="logo-img">
+                </div>
+
+                <h2 class="login-title">LOG IN</h2>
+
+                <form id="loginForm">
+                    <div class="input-group">
+                        <input type="text" id="username" placeholder="Username/email" required>
+                    </div>
+                    <div class="input-group">
+                        <input type="password" id="password" placeholder="Password" required>
+                    </div>
+              
+                    <div id="error-message" class="error-text"></div>
+                    
+                    <button type="submit" class="btn-login">LOG IN</button>
+                </form>
+
+                <div class="signup-link">
+                    Dont have an account? <a href="Signup.html">SIGN UP</a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Mencegah reload halaman standar form
+
+            const usernameInput = document.getElementById('username').value.trim();
+            const passwordInput = document.getElementById('password').value;
+            const errorMessage = document.getElementById('error-message');
+
+            // Validasi: Username harus "user" dan Password harus "123"
+            if (usernameInput === "user" && passwordInput === "123") {
+                errorMessage.style.color = "#4CAF50"; // Warna hijau untuk sukses
+                errorMessage.textContent = "Login Berhasil! Mengalihkan...";
+                errorMessage.style.display = "block";
+                
+                // REVISI KUNCI: Mengalihkan langsung ke detail.html setelah jeda 1 detik
+                setTimeout(() => {
+                    window.location.href = "home.html"; 
+                }, 1000);
+                
+            } else {
+                errorMessage.style.color = "#ff4d4d"; // Warna merah untuk gagal
+                errorMessage.textContent = "Username atau password salah!";
+                errorMessage.style.display = "block";
+            }
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,424 @@
+/* --- BASE VARIABLES & COLOR PALETTE (Disamakan dengan halaman utama) --- */
+:root {
+    --primary-mazda-red: #8c111c;
+    --bg-luxury-cream: #faf6ed;
+    --accent-matte-gold: #c2a478;
+    --dark-charcoal: #1c1a17;
+    --text-main-white: #ffffff;
+    --text-body-dark: #2b2b2b;
+}
+
+body {
+    background-color: var(--bg-luxury-cream);
+    font-family: 'Montserrat', sans-serif;
+    color: var(--text-body-dark);
+    overflow-x: hidden;
+}
+
+
+/* HEADER NAVIGATION */
+.main-header {
+    background-color: var(--primary-mazda-red);
+    height: 90px;
+    width: 100%;
+    position: relative;
+    z-index: 1000;
+}
+
+.brand-logo-img {
+    height: 52px; 
+    width: auto;
+    object-fit: contain;
+    display: block;
+}
+
+.nav-links .nav-item-link {
+    color: var(--text-main-white);
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 500;
+    margin: 0 22px;
+    position: relative;
+    padding: 8px 0;
+    letter-spacing: 0.5px;
+}
+
+.nav-links .nav-item-link.active::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: var(--text-main-white);
+}
+
+.style-arrow {
+    font-size: 11px;
+    vertical-align: middle;
+}
+
+.vertical-divider {
+    width: 1px;
+    height: 40px;
+    background-color: rgba(255, 255, 255, 0.25);
+    margin-right: 30px;
+}
+
+.btn-auth {
+    color: var(--accent-matte-gold) !important;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+}
+
+/* DROPDOWN AREA */
+.dropdown-wrapper {
+    position: relative;
+}
+
+.dropdown-wrapper::before {
+    content: '';
+    position: absolute;
+    top: 25px;
+    left: 0;
+    width: 100%;
+    height: 35px;
+    background: transparent;
+    z-index: 1005;
+    display: none;
+}
+.dropdown-wrapper:hover::before {
+    display: block;
+}
+
+.custom-dropdown {
+    position: absolute;
+    top: 48px;
+    left: 50%;
+    transform: translateX(-50%) translateY(10px);
+    width: 250px;
+    background-color: var(--text-main-white);
+    border-radius: 12px;
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.18);
+    padding: 18px 0 0 0;
+    display: none;
+    opacity: 0;
+    z-index: 1010;
+    transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+.custom-dropdown.show {
+    display: block;
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+}
+
+.dropdown-arrow {
+    position: absolute;
+    top: -6px;
+    left: 50%;
+    transform: translateX(-50%) rotate(45deg);
+    width: 14px;
+    height: 14px;
+    background-color: var(--text-main-white);
+}
+
+.dropdown-title-header {
+    font-size: 11px;
+    font-weight: 700;
+    color: #a65359; 
+    text-transform: uppercase;
+    padding: 0 22px 12px 22px;
+    letter-spacing: 0.5px;
+}
+
+.dropdown-brand-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.dropdown-brand-list li a {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 11px 22px;
+    color: var(--dark-charcoal) !important;
+    font-size: 13px;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+
+.dropdown-brand-list li a:hover {
+    background-color: #f7f5f0;
+}
+
+.dropdown-brand-list li a::after { display: none !important; }
+
+.dropdown-brand-logo {
+    width: 20px;         /* Mengatur lebar logo brand */
+    height: 20px;        /* Mengatur tinggi logo brand */
+    object-fit: contain; /* Menjaga proporsi logo agar tidak gepeng */
+    margin-right: 5px;  /* Memberi jarak antara logo dan teks brand */
+    vertical-align: middle;
+}
+
+.dropdown-footer {
+    border-top: 1px solid #f0edf6;
+    padding: 14px 22px;
+    margin-top: 6px;
+    border-radius: 0 0 12px 12px;
+}
+
+.dropdown-footer a {
+    color: var(--primary-mazda-red) !important;
+    font-weight: 700 !important;
+    font-size: 13px !important;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.dropdown-footer a::after { display: none !important; }
+
+/* --- SHOWROOM TITLE & BREADCRUMBS --- */
+.showroom-header-section {
+    padding: 50px 0 30px 0;
+    background-color: var(--bg-luxury-cream);
+}
+
+.brand-title {
+    font-family: 'Syncopate', sans-serif;
+    font-size: 29px;
+    font-weight: 700;
+    color: var(--dark-charcoal);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+/* Mengecilkan ukuran font teks subtitle showroom */
+.accent-subtitle p {
+    font-size: 12px !important; /* Standarnya sekitar 14px-16px, diubah ke 12px agar lebih kecil */
+}
+
+.accent-line {
+    height: 2px;
+    width: 40px;
+    background-color: var(--primary-mazda-red);
+    display: inline-block;
+}
+
+.showroom-breadcrumbs {
+    font-size: 12px;
+    margin-top: -50px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: #777777;
+}
+
+.showroom-breadcrumbs a {
+    color: #777777;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+
+.showroom-breadcrumbs a:hover {
+    color: var(--primary-mazda-red);
+}
+
+.showroom-breadcrumbs .current {
+    color: var(--primary-mazda-red);
+    font-weight: 700;
+}
+
+/* --- CAR CARDS GRID SYSTEM (Rasio Landscape Elegan) --- */
+.showroom-grid-section {
+    background-color: var(--bg-luxury-cream);
+}
+
+.car-card {
+    background-color: var(--text-main-white);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.03);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.car-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+}
+
+.card-img-wrapper {
+    width: 100%;
+    aspect-ratio: 21 / 9; /* Menggunakan rasio memanjang landscape sesuai halaman utama */
+    overflow: hidden;
+    background-color: #f0f0f0;
+}
+
+.card-img-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: transform 0.5s ease;
+}
+
+.car-card:hover .card-img-wrapper img {
+    transform: scale(1.04);
+}
+
+.card-body-custom {
+    padding: 22px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.car-name {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 17px;
+    font-weight: 700;
+    color: var(--dark-charcoal);
+    margin-bottom: 14px;
+}
+
+.car-specs {
+    color: #777777;
+    margin-bottom: 20px;
+}
+
+.car-specs span {
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.text-danger-custom {
+    color: var(--primary-mazda-red);
+}
+
+.car-price {
+    font-size: 17px;
+    font-weight: 700;
+    color: var(--primary-mazda-red);
+}
+
+.btn-detail {
+    display: inline-block;
+    padding: 5px 16px;
+    border: 1px solid var(--primary-mazda-red);
+    color: var(--primary-mazda-red);
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 500;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+}
+
+.btn-detail:hover {
+    background-color: var(--primary-mazda-red);
+    color: var(--text-main-white);
+}
+
+/* --- PAGINATION SYSTEM --- */
+.custom-pagination {
+    margin-top: 30px !important;
+    display: flex;
+    list-style: none;
+    padding-left: 0;
+    gap: 10px;
+    margin: 0;
+}
+
+.custom-pagination .page-item .page-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--dark-charcoal);
+    background-color: transparent;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    text-decoration: none;
+    transition: all 0.2s ease-in-out;
+}
+
+/* Efek Hover (Saat kursor diarahkan ke kotak angka) */
+.custom-pagination .page-item .page-link:hover {
+    border-color: var(--primary-mazda-red);
+    color: var(--primary-mazda-red);
+    background-color: rgba(140, 17, 28, 0.05);
+}
+
+/* Kondisi Saat Halaman Aktif (Kotak Merah Tulisan Putih) */
+.custom-pagination .page-item.active .page-link {
+    background-color: var(--primary-mazda-red);
+    border-color: var(--primary-mazda-red);
+    color: var(--text-main-white);
+}
+
+/* --- FOOTER (Sama persis dengan halaman utama) --- */
+.main-footer {
+    background-color: var(--dark-charcoal);
+    color: var(--text-main-white);
+    margin-top: 20px;
+}
+
+.footer-logo {
+    font-family: 'Syncopate', sans-serif;
+    color: var(--accent-matte-gold);
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.footer-desc {
+    font-size: 12px;
+    color: #a0a0a0;
+    text-transform: lowercase;
+}
+
+.footer-socials a {
+    color: var(--text-main-white);
+    margin-right: 20px;
+    font-size: 16px;
+    transition: color 0.2s;
+}
+
+.footer-socials a:hover {
+    color: var(--accent-matte-gold);
+}
+
+.footer-quicklinks .links-title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: var(--accent-matte-gold);
+}
+
+.footer-quicklinks a {
+    display: block;
+    color: #b0b0b0;
+    text-decoration: none;
+    font-size: 13px;
+    margin-bottom: 7px;
+    transition: color 0.2s;
+}
+
+.footer-quicklinks a:hover {
+    color: var(--text-main-white);
+}
+
+.fs-small { font-size: 11px; }

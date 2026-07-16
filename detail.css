@@ -1,0 +1,498 @@
+/* ==========================================================================
+   RESET & GLOBAL STYLES
+   ========================================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    background-color: #f7f6f2; /* Krem soft sesuai desain */
+    color: #222222;
+    overflow-x: hidden;
+}
+
+/* ==========================================================================
+   NAVBAR
+   ========================================================================== */
+.navbar {
+    background-color: #a71c24; /* Merah gelap premium */
+    padding: 15px 0;
+   
+}
+
+.nav-container {
+    max-width: 1250px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.logo-brand img {
+    height: 45px;
+    object-fit: contain;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.nav-links a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover, .nav-links a.active {
+    color: #e5c394;
+    border-bottom: 2px solid #e5c394;
+    padding-bottom: 4px;
+}
+
+.nav-auth .btn-auth {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.nav-auth .btn-auth:hover {
+    color: #e5c394;
+}
+
+/* ==========================================================================
+   BREADCRUMB
+   ========================================================================== */
+.breadcrumb-container {
+    max-width: 1250px;
+    margin: 20px auto 10px auto;
+    padding: 0 20px;
+    text-align: right;
+}
+
+.breadcrumb {
+    font-size: 12px;
+    color: #777777;
+}
+
+.breadcrumb a {
+    color: #777777;
+    text-decoration: none;
+}
+
+.breadcrumb a:hover {
+    color: #a71c24;
+}
+
+.breadcrumb span {
+    margin: 0 5px;
+}
+
+.breadcrumb .current {
+    color: #a71c24;
+    font-weight: 600;
+}
+
+/* ==========================================================================
+   MAIN CONTENT LAYOUT (STRUKTUR DESKTOP PRESISI)
+   ========================================================================== */
+.main-content {
+    max-width: 1250px;
+    margin: 0 auto 60px auto;
+    padding: 0 20px;
+}
+
+.content-container {
+    display: flex;
+    gap: 35px;
+    align-items: flex-start; /* Mencegah elemen melar ke bawah secara otomatis */
+}
+
+/* --- Kiri: Galeri Foto & Deskripsi (Dibuat lebih ringkas agar tidak kebesaran) --- */
+.left-column {
+    flex: 1.1; /* Sedikit dikecilkan rasionya dibanding tengah */
+    width: 100%;
+}
+
+/* ==========================================================================
+   REVISI GALERI: Mengunci Ukuran dan Rasio Gambar Agar Setara & Konsisten
+   ========================================================================== */
+
+/* Container Gambar Utama */
+.main-image-container {
+    width: 100%;
+    height: 340px;            /* Mengunci tinggi box utama di desktop */
+    background-color: #ffffff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+/* Gambar Utama di Dalam Container */
+.main-image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;        /* Memotong dan mengisi ruang box secara penuh & rapi */
+    object-position: center;  /* Memastikan fokus gambar tetap berada di tengah */
+}
+
+/* Container untuk Deretan Gambar Kecil di Bawah */
+.thumbnail-container {
+    display: flex;
+    gap: 12px;                /* Jarak antar card thumbnail */
+    margin-top: 15px;
+}
+
+/* Card Thumbnail individual */
+.thumb {
+    flex: 1;                  /* Membagi ruang kosong secara merata sehingga lebar tiap card setara */
+    aspect-ratio: 4 / 3;      /* Mengunci rasio kotak (contoh: 4:3), membuat bentuknya seragam sempurna */
+    height: 75px;             /* Mengunci tinggi thumbnail agar sejajar secara horizontal */
+    object-fit: cover;        /* Mengisi ruang kotak thumbnail tanpa merusak proporsi gambar asli */
+    border-radius: 6px;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: all 0.2s ease-in-out;
+    background-color: #ffffff;
+}
+
+
+.thumb:hover, .thumb.active {
+    border-color: #a71c24;    
+    opacity: 0.9;
+}
+
+
+/*Judul*/
+.description-box {
+    margin-top: 25px;
+    background-color: #ffffff;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+
+.description-box h3 {
+    font-size: 14px;
+    color: #a71c24;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-align: center;         
+    display: block;              
+    margin-bottom: 20px;
+    position: relative;
+    padding-bottom: 8px;
+}
+
+/* Membuat garis merah kostum di bawah judul */
+.description-box h3::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%); 
+    width: 300px;                 
+    height: 3px;                
+    background-color: #a71c24;   
+}
+
+.description-box p {
+    font-size: 13px;
+    line-height: 1.6;
+    color: #444444;
+    text-align: justify;
+}
+
+/* --- Tengah: Spesifikasi Teknis (Diberikan porsi ruang lebih luas) --- */
+.middle-column {
+    flex: 1.4; 
+}
+
+.car-title {
+    font-size: 32px;
+    font-weight: 800;
+    color: #d11922; /* Merah cerah tegas sesuai gambar utama */
+    margin-bottom: 15px;
+    letter-spacing: 0.5px;
+}
+
+.quick-specs {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.spec-item {
+    font-size: 13px;
+    font-weight: 700;
+    color: #333333;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.spec-item i {
+    color: #d11922;
+    font-size: 15px;
+}
+
+.car-tagline {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #333333;
+    font-weight: 500;
+    margin-bottom: 25px;
+}
+
+.specs-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.specs-table td {
+    padding: 10px 5px;
+    vertical-align: top;
+    font-size: 13.5px;
+    color: #222222;
+    border-bottom: 1px solid #e2e1dd;
+}
+
+.specs-table tr td:first-child {
+    font-weight: 600;
+    width: 170px;
+    color: #333333;
+}
+
+.specs-table tr td:nth-child(2) {
+    width: 15px;
+    text-align: center;
+}
+
+.specs-table td span {
+    font-size: 11.5px;
+    color: #666666;
+    font-weight: 400;
+    display: inline-block;
+    margin-top: 2px;
+}
+
+/* --- Kanan: Harga & Fitur --- */
+.right-column {
+    flex: 0.9;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+}
+
+.price-card, .features-card {
+    background-color: #ffffff;
+    padding: 22px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.03);
+}
+
+.price-label {
+    font-size: 11px;
+    font-weight: 700;
+    color: #666666;
+    letter-spacing: 1px;
+    display: block;
+    text-align: center;
+    margin-bottom: 6px;
+}
+
+.price-value {
+    font-size: 28px;
+    font-weight: 800;
+    color: #d11922;
+    text-align: center;
+    margin-bottom: 18px;
+    border-bottom: 2px solid #d11922;
+    padding-bottom: 10px;
+    letter-spacing: 0.5px;
+}
+
+.btn-action {
+    width: 100%;
+    padding: 13px;
+    font-size: 12px;
+    font-weight: 700;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-bottom: 10px;
+    transition: all 0.2s ease;
+    letter-spacing: 0.5px;
+}
+
+.btn-action:last-of-type {
+    margin-bottom: 0;
+}
+
+.btn-primary {
+    background-color: #a71c24;
+    color: #ffffff;
+    border: none;
+}
+
+.btn-primary:hover {
+    background-color: #85141a;
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: #a71c24;
+    border: 1.5px solid #a71c24;
+}
+
+.btn-secondary:hover {
+    background-color: #a71c24;
+    color: #ffffff;
+}
+
+.features-card h3 {
+    font-size: 13px;
+    color: #222222;
+    margin-bottom: 15px;
+    letter-spacing: 0.5px;
+    font-weight: 700;
+}
+
+.features-card ul {
+    list-style: none;
+}
+
+.features-card li {
+    font-size: 12.5px;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #444444;
+    font-weight: 500;
+}
+
+.features-card li:last-child {
+    margin-bottom: 0;
+}
+
+.features-card li i {
+    color: #a71c24;
+    font-size: 14px;
+}
+
+/* ==========================================================================
+   FOOTER
+   ========================================================================== */
+.footer {
+    background-color: #111111;
+    color: #ffffff;
+    padding: 45px 0;
+    border-top: 3px solid #a71c24;
+}
+
+.footer-container {
+    max-width: 1250px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+.footer-left h2 {
+    font-size: 18px;
+    color: #e5c394;
+    letter-spacing: 1px;
+    margin-bottom: 4px;
+}
+
+.footer-left p {
+    font-size: 12px;
+    color: #888888;
+    margin-bottom: 20px;
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+}
+
+.social-icons a {
+    color: #ffffff;
+    font-size: 15px;
+    transition: color 0.3s;
+}
+
+.social-icons a:hover {
+    color: #e5c394;
+}
+
+.footer-right h3 {
+    font-size: 13px;
+    color: #ffffff;
+    margin-bottom: 15px;
+    letter-spacing: 0.5px;
+}
+
+.footer-right ul {
+    list-style: none;
+}
+
+.footer-right li {
+    margin-bottom: 8px;
+}
+
+.footer-right a {
+    color: #888888;
+    text-decoration: none;
+    font-size: 13px;
+    transition: color 0.3s;
+}
+
+.footer-right a:hover {
+    color: #ffffff;
+}
+
+/* ==========================================================================
+   RESPONSIVE DESIGN (TABLET & MOBILE)
+   ========================================================================== */
+@media (max-width: 992px) {
+    .content-container {
+        flex-direction: column;
+        gap: 25px;
+    }
+    .main-image-container {
+        max-height: 450px;
+    }
+    .right-column {
+        flex-direction: row;
+        gap: 20px;
+    }
+    .price-card, .features-card {
+        flex: 1;
+    }
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+    .right-column {
+        flex-direction: column;
+    }
+    .footer-container {
+        flex-direction: column;
+        gap: 30px;
+    }
+}
