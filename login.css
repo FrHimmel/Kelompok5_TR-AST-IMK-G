@@ -1,4 +1,3 @@
-/* Reset dasar untuk margin dan padding */
 * {
     margin: 0;
     padding: 0;
@@ -12,27 +11,21 @@ body, html {
     overflow: hidden;
 }
 
-/* Container Utama Split-Screen */
 .container {
     display: flex;
     width: 100%;
     height: 100vh;
 }
 
-
-
-/* Sisi Kiri */
 .left-side {
     width: 40%; 
     height: 100%;
     background-image: url('https://i.pinimg.com/736x/95/38/2b/95382b4e84d703c69571d10d1d00b504.jpg'); 
-    
     background-size: cover;     
     background-position: right center; 
     background-repeat: no-repeat;
 }
 
-/* Sisi Kanan */
 .right-side {
     flex: 1; 
     background-color: #111111;
@@ -41,14 +34,13 @@ body, html {
     align-items: center;
     padding: 40px;
 }
-/* Box Konten Login */
+
 .login-box {
     width: 100%;
     max-width: 460px;
     text-align: center;
 }
 
-/* Gaya Logo */
 .logo-container {
     margin-bottom: 40px;
 }
@@ -59,16 +51,14 @@ body, html {
     object-fit: contain;
 }
 
-/* REVISI: Heading LOG IN dibuat tebal (font-weight: 700) */
 .login-title {
     color: #ffffff;
     font-size: 28px;
-    font-weight: 700; /* Mengubah menjadi Bold/Tebal */
+    font-weight: 700;
     letter-spacing: 0px;
     margin-bottom: 40px;
 }
 
-/* Grouping Input */
 .input-group {
     margin-bottom: 20px;
 }
@@ -85,13 +75,11 @@ body, html {
     transition: all 0.3s ease;
 }
 
-/* Mengatur warna teks placeholder */
 .input-group input::placeholder {
     color: #a0a0a0;
     font-weight: 400;
 }
 
-/* Styling Pesan Error/Sukses */
 .error-text {
     display: none;
     font-size: 13px;
@@ -100,7 +88,6 @@ body, html {
     padding-left: 5px;
 }
 
-/* Tombol Login (Warna Emas/Tan Premium) */
 .btn-login {
     width: 100%;
     padding: 16px;
@@ -120,7 +107,6 @@ body, html {
     background-color: #b3976f;
 }
 
-/* Teks Sign Up di Bagian Bawah */
 .signup-link {
     margin-top: 60px;
     color: #aaaaaa;
@@ -140,7 +126,6 @@ body, html {
     color: #ffffff;
 }
 
-/* Responsif untuk layar hp/tablet kecil */
 @media (max-width: 768px) {
     .left-side {
         display: none;

@@ -32,8 +32,8 @@
     <div class="breadcrumb-container">
         <div class="breadcrumb">
             <a href="home.html">Home</a> <span>&gt;</span>
-            <a href="#">Showroom</a> <span>&gt;</span>
-            <a href="#">View All Car</a> <span>&gt;</span>
+            <a href="home.html">Showroom</a> <span>&gt;</span>
+            <a href="vac.html">View All Car</a> <span>&gt;</span>
             <span class="current">View Detail</span>
         </div>
     </div>
@@ -43,14 +43,14 @@
             
             <div class="left-column">
                 <div class="main-image-container">
-                    <img id="mainImage" src="foto/Porsche.jpg" alt="Porsche 911 GT3S Main">
+                    <img id="mainImage" src="images/Porsche.jpg" alt="Porsche 911 GT3S Main">
                 </div>
                 
                 <div class="thumbnail-container">
-                    <img class="thumb active" src="foto/Porsche.jpg" alt="View 1">
-                    <img class="thumb" src="foto/Porsche_back.jpg" alt="View 2">
-                    <img class="thumb" src="foto/porsche_butt.jpg" alt="View 3">
-                    <img class="thumb" src="foto/Porsche_stering.jpg" alt="View 4">
+                    <img class="thumb active" src="images/Porsche.jpg" alt="View 1">
+                    <img class="thumb" src="images/Porsche_back.jpg" alt="View 2">
+                    <img class="thumb" src="images/porsche_butt.jpg" alt="View 3">
+                    <img class="thumb" src="images/Porsche_stering.jpg" alt="View 4">
                 </div>
 
                 <div class="description-box">
@@ -113,8 +113,8 @@
                 <div class="price-card">
                     <span class="price-label">HARGA</span>
                     <h2 class="price-value">$ 250,000 USD</h2>
-                    <button class="btn-action btn-primary">HUBUNGI KAMI</button>
-                    <button class="btn-action btn-secondary">CHECK OUT</button>
+                   <button class="btn-action btn-primary" onclick="window.location.href='contact.html'">HUBUNGI KAMI</button>
+                    <button class="btn-action btn-secondary" onclick="window.location.href='pembayaran.html'">CHECK OUT</button>
                 </div>
 
                 <div class="features-card">
@@ -155,13 +155,8 @@
 
         thumbs.forEach(thumb => {
             thumb.addEventListener('click', function() {
-                // 1. Ganti src gambar utama dengan src gambar thumbnail yang diklik
                 mainImage.src = this.src;
-
-                // 2. Hapus class 'active' dari semua thumbnail
                 thumbs.forEach(t => t.classList.remove('active'));
-
-                // 3. Tambahkan kembali class 'active' hanya ke thumbnail yang sedang diklik
                 this.classList.add('active');
             });
         });

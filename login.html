@@ -44,25 +44,23 @@
 
     <script>
         document.getElementById('loginForm').addEventListener('submit', function(event) {
-            event.preventDefault(); // Mencegah reload halaman standar form
+            event.preventDefault();
 
             const usernameInput = document.getElementById('username').value.trim();
             const passwordInput = document.getElementById('password').value;
             const errorMessage = document.getElementById('error-message');
 
-            // Validasi: Username harus "user" dan Password harus "123"
             if (usernameInput === "user" && passwordInput === "123") {
-                errorMessage.style.color = "#4CAF50"; // Warna hijau untuk sukses
+                errorMessage.style.color = "#4CAF50";
                 errorMessage.textContent = "Login Berhasil! Mengalihkan...";
                 errorMessage.style.display = "block";
                 
-                // REVISI KUNCI: Mengalihkan langsung ke detail.html setelah jeda 1 detik
                 setTimeout(() => {
                     window.location.href = "home.html"; 
                 }, 1000);
                 
             } else {
-                errorMessage.style.color = "#ff4d4d"; // Warna merah untuk gagal
+                errorMessage.style.color = "#ff4d4d";
                 errorMessage.textContent = "Username atau password salah!";
                 errorMessage.style.display = "block";
             }

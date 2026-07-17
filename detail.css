@@ -1,6 +1,3 @@
-/* ==========================================================================
-   RESET & GLOBAL STYLES
-   ========================================================================== */
 * {
     margin: 0;
     padding: 0;
@@ -9,18 +6,14 @@
 }
 
 body {
-    background-color: #f7f6f2; /* Krem soft sesuai desain */
+    background-color: #f7f6f2; 
     color: #222222;
     overflow-x: hidden;
 }
 
-/* ==========================================================================
-   NAVBAR
-   ========================================================================== */
 .navbar {
-    background-color: #a71c24; /* Merah gelap premium */
+    background-color: #a71c24; 
     padding: 15px 0;
-   
 }
 
 .nav-container {
@@ -71,9 +64,6 @@ body {
     color: #e5c394;
 }
 
-/* ==========================================================================
-   BREADCRUMB
-   ========================================================================== */
 .breadcrumb-container {
     max-width: 1250px;
     margin: 20px auto 10px auto;
@@ -104,9 +94,6 @@ body {
     font-weight: 600;
 }
 
-/* ==========================================================================
-   MAIN CONTENT LAYOUT (STRUKTUR DESKTOP PRESISI)
-   ========================================================================== */
 .main-content {
     max-width: 1250px;
     margin: 0 auto 60px auto;
@@ -116,50 +103,41 @@ body {
 .content-container {
     display: flex;
     gap: 35px;
-    align-items: flex-start; /* Mencegah elemen melar ke bawah secara otomatis */
+    align-items: flex-start; 
 }
 
-/* --- Kiri: Galeri Foto & Deskripsi (Dibuat lebih ringkas agar tidak kebesaran) --- */
 .left-column {
-    flex: 1.1; /* Sedikit dikecilkan rasionya dibanding tengah */
+    flex: 1.1; 
     width: 100%;
 }
 
-/* ==========================================================================
-   REVISI GALERI: Mengunci Ukuran dan Rasio Gambar Agar Setara & Konsisten
-   ========================================================================== */
-
-/* Container Gambar Utama */
 .main-image-container {
     width: 100%;
-    height: 340px;            /* Mengunci tinggi box utama di desktop */
+    height: 340px;            
     background-color: #ffffff;
     border-radius: 8px;
     overflow: hidden;
     box-shadow: 0 4px 12px rgba(0,0,0,0.05);
 }
 
-/* Gambar Utama di Dalam Container */
 .main-image-container img {
     width: 100%;
     height: 100%;
-    object-fit: cover;        /* Memotong dan mengisi ruang box secara penuh & rapi */
-    object-position: center;  /* Memastikan fokus gambar tetap berada di tengah */
+    object-fit: cover;        
+    object-position: center;  
 }
 
-/* Container untuk Deretan Gambar Kecil di Bawah */
 .thumbnail-container {
     display: flex;
-    gap: 12px;                /* Jarak antar card thumbnail */
+    gap: 12px;                
     margin-top: 15px;
 }
 
-/* Card Thumbnail individual */
 .thumb {
-    flex: 1;                  /* Membagi ruang kosong secara merata sehingga lebar tiap card setara */
-    aspect-ratio: 4 / 3;      /* Mengunci rasio kotak (contoh: 4:3), membuat bentuknya seragam sempurna */
-    height: 75px;             /* Mengunci tinggi thumbnail agar sejajar secara horizontal */
-    object-fit: cover;        /* Mengisi ruang kotak thumbnail tanpa merusak proporsi gambar asli */
+    flex: 1;                  
+    aspect-ratio: 4 / 3;      
+    height: 75px;             
+    object-fit: cover;        
     border-radius: 6px;
     cursor: pointer;
     border: 2px solid transparent;
@@ -167,14 +145,11 @@ body {
     background-color: #ffffff;
 }
 
-
 .thumb:hover, .thumb.active {
     border-color: #a71c24;    
     opacity: 0.9;
 }
 
-
-/*Judul*/
 .description-box {
     margin-top: 25px;
     background-color: #ffffff;
@@ -195,7 +170,6 @@ body {
     padding-bottom: 8px;
 }
 
-/* Membuat garis merah kostum di bawah judul */
 .description-box h3::after {
     content: '';
     position: absolute;
@@ -214,7 +188,6 @@ body {
     text-align: justify;
 }
 
-/* --- Tengah: Spesifikasi Teknis (Diberikan porsi ruang lebih luas) --- */
 .middle-column {
     flex: 1.4; 
 }
@@ -222,7 +195,7 @@ body {
 .car-title {
     font-size: 32px;
     font-weight: 800;
-    color: #d11922; /* Merah cerah tegas sesuai gambar utama */
+    color: #d11922; 
     margin-bottom: 15px;
     letter-spacing: 0.5px;
 }
@@ -287,7 +260,6 @@ body {
     margin-top: 2px;
 }
 
-/* --- Kanan: Harga & Fitur --- */
 .right-column {
     flex: 0.9;
     display: flex;
@@ -392,9 +364,6 @@ body {
     font-size: 14px;
 }
 
-/* ==========================================================================
-   FOOTER
-   ========================================================================== */
 .footer {
     background-color: #111111;
     color: #ffffff;
@@ -464,9 +433,6 @@ body {
     color: #ffffff;
 }
 
-/* ==========================================================================
-   RESPONSIVE DESIGN (TABLET & MOBILE)
-   ========================================================================== */
 @media (max-width: 992px) {
     .content-container {
         flex-direction: column;
