@@ -53,7 +53,7 @@ body {
 /* AKTIF NAVBAR BERUBAH MENJADI EMAS */
 .nav-links .nav-item-link.active,
 .nav-links .nav-item-link:hover {
-    color: var(--accent-matte-gold) !important;
+    color: var(--text-main-white) !important;
 }
 
 .nav-links .nav-item-link.active::after {
